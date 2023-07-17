@@ -16,7 +16,7 @@ data:
 
         location / {
           default_type  text/html;
-          return 200 'Requested route: $request_uri\n';
+          return 200 'Requested rout is: $request_uri\n';
         }
       }
     }
