@@ -45,9 +45,9 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/tls-acme: "true"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    # kubernetes.io/tls-acme: "true"
+    # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
   name: nginx-ingress
 spec:
   ingressClassName: nginx
@@ -59,7 +59,7 @@ spec:
           service:
             name: nginx-service
             port: 
-              name: http
+              number: 80
         path: /
         pathType: Prefix
   tls:
